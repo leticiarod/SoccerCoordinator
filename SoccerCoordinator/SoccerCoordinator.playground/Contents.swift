@@ -114,7 +114,7 @@ teamRaptors.count
 
 // PART 3a
 /*
-    Logic
+    Logic that iterates through all three teams of players and generates a personalized letter to the guardians
 */
 
 var index: Int = 0
@@ -125,17 +125,31 @@ var letter:String
 
 while index < teamSharks.count {
     
-    letter = "Sharks - March 17, 3pm -  \(teamSharks[index]["name"]) - \(teamSharks[index]["guardians"])"
+    //unwrap the name and guadians name's from the dictionary
+    if let teamSharksNamePlayer = teamSharks[index]["name"], let teamSharksGuardiansPlayer = teamSharks[index]["guardians"]  {
+    letter = "Sharks - March 17, 3pm -  \(teamSharksNamePlayer) - \(teamSharksGuardiansPlayer)"
     letters.append(letter)
-    letter = "Dragons - March 17, 1pm -  \(teamDragons[index]["name"]) - \(teamDragons[index]["guardians"])"
-    letters.append(letter)
-    letter = "Raptors - March 18, 1pm -  \(teamRaptors[index]["name"]) - \(teamRaptors[index]["guardians"])"
-    letters.append(letter)
+    }
     
+    
+    //unwrap the name and guadians name's from the dictionary
+    if let teamDragonsNamePlayer = teamDragons[index]["name"], let teamDragonsGuardiansPlayer = teamDragons[index]["guardians"]  {
+    letter = "Dragons - March 17, 1pm -  \(teamDragonsNamePlayer) - \(teamDragonsGuardiansPlayer)"
+    letters.append(letter)
+    }
+    
+    
+    //unwrap the name and guadians name's from the dictionary
+    if let teamRaptorsNamePlayer = teamRaptors[index]["name"], let teamRaptorsGuardiansPlayer = teamRaptors[index]["guardians"]  {
+    letter = "Raptors - March 18, 1pm -  \(teamRaptorsNamePlayer) - \(teamRaptorsGuardiansPlayer)"
+    letters.append(letter)
+    }
     
     index += 1
     
 }
+
+// The letters are printed in the console using a for loop to iterate through the letters array
 
 for letter in letters {
     print(letter)
