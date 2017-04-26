@@ -121,7 +121,7 @@ var startIndex = 0
 var endIndex = orderedExperiencedPlayers.count - 1
 var indexmm = orderedExperiencedPlayers.count
 
-while indexmm >= (orderedExperiencedPlayers.count % 6) {
+while indexmm > (orderedExperiencedPlayers.count % 6) {
     teamSharks.append(orderedExperiencedPlayers[startIndex])
     teamSharks.append(orderedExperiencedPlayers[endIndex])
     startIndex+=1
@@ -137,15 +137,14 @@ while indexmm >= (orderedExperiencedPlayers.count % 6) {
     indexmm -= 6
 }
 
-
 while startIndex < endIndex {
     teamSharks.append(orderedExperiencedPlayers[startIndex])
     startIndex+=1
-    if startIndex != endIndex{
+    if startIndex <= endIndex{
         teamDragons.append(orderedExperiencedPlayers[startIndex])
         startIndex+=1
     }
-    if startIndex != endIndex{
+    if startIndex <= endIndex{
         teamRaptors.append(orderedExperiencedPlayers[startIndex])
     }
 }
@@ -184,7 +183,7 @@ startIndex = 0
 endIndex = orderedUnexperiencedPlayers.count - 1
 indexmm = orderedUnexperiencedPlayers.count
 
-while indexmm >= (orderedUnexperiencedPlayers.count % 6) {
+while indexmm > (orderedUnexperiencedPlayers.count % 6) {
     teamSharks.append(orderedUnexperiencedPlayers[startIndex])
     teamSharks.append(orderedUnexperiencedPlayers[endIndex])
     startIndex+=1
@@ -203,15 +202,14 @@ while indexmm >= (orderedUnexperiencedPlayers.count % 6) {
 while startIndex < endIndex {
     teamSharks.append(orderedUnexperiencedPlayers[startIndex])
     startIndex+=1
-    if startIndex != endIndex{
+    if startIndex <= endIndex{
         teamDragons.append(orderedUnexperiencedPlayers[startIndex])
         startIndex+=1
     }
-    if startIndex != endIndex {
+    if startIndex <= endIndex {
         teamRaptors.append(orderedUnexperiencedPlayers[startIndex])
     }
 }
-
 
 // PART 3
 /*
