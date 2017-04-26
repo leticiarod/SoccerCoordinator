@@ -60,7 +60,6 @@ var teamSharksAvg = 0.0
 var orderedExperiencedPlayers: [[String:Any]] = Array()
 var orderedUnexperiencedPlayers: [[String:Any]] = Array()
 
-
 // PART 2
 
 /*
@@ -94,7 +93,6 @@ for player in players {
 // Experienced players are ranked from largest to smallest and stored in orderedExperiencedPlayers array.
 
 var i = 0, j = 0, max = 0, maxPosition = 0
-
 
 while i < experiencedPlayers.count {
     if let heightPlayer = experiencedPlayers[i]["height"] as? Int {
@@ -159,7 +157,6 @@ j = 0
 max = 0
 maxPosition = 0
 
-
 while i < nonExperiencedPlayers.count {
     if let heightPlayer = nonExperiencedPlayers[i]["height"] as? Int {
         max = heightPlayer
@@ -222,7 +219,6 @@ while startIndex < endIndex {
     providing player name, team name, guardian names, practice date/time.
     For the “Exceeds Expectations” rating print out the average height of the players of each team.
 */
-
 
 //  The averages of each equipment are calculated.
 
